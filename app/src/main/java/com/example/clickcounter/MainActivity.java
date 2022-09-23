@@ -41,5 +41,21 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        minus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                count = Integer.parseInt(counter.getText().toString());
+                count--;
+                counter.setText(count);
+                if (count<0){
+                    counter.setTextColor(Color.rgb(255, 0, 0));
+                } else if (count>0){
+                    counter.setTextColor(Color.rgb(0, 255, 0));
+                } else {
+                    counter.setTextColor(Color.rgb(0, 0, 255));
+                }
+            }
+        });
     }
 }
