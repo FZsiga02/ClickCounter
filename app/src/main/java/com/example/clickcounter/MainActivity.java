@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 count = Integer.parseInt(counter.getText().toString());
                 count++;
-                counter.setText(count);
+                counter.setText(String.valueOf(count));
                 if (count<0){
                     counter.setTextColor(Color.rgb(255, 0, 0));
                 } else if (count>0){
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 count = Integer.parseInt(counter.getText().toString());
                 count--;
-                counter.setText(count);
+                counter.setText(String.valueOf(count));
                 if (count<0){
                     counter.setTextColor(Color.rgb(255, 0, 0));
                 } else if (count>0){
